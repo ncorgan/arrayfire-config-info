@@ -2,13 +2,13 @@
 # Project setup
 ########################################################################
 cmake_minimum_required(VERSION 3.5)
-project(arrayfire-list-devices CXX)
+project(arrayfire-config-info CXX)
 
 find_package(ArrayFire REQUIRED)
 
-add_executable(arrayfire-list-devices arrayfire-list-devices.cpp)
-target_link_libraries(arrayfire-list-devices ArrayFire::af)
+add_executable(arrayfire-config-info arrayfire-config-info.cpp)
+target_link_libraries(arrayfire-config-info ArrayFire::af)
 
 install(
-    TARGETS arrayfire-list-devices RUNTIME
+    TARGETS arrayfire-config-info RUNTIME
     DESTINATION bin)
