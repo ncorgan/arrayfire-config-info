@@ -1,4 +1,4 @@
-// Copyright (c) 2019 Nicholas Corgan
+// Copyright (c) 2019-2020 Nicholas Corgan
 // SPDX-License-Identifier: BSD-3-Clause
 
 #include <arrayfire.h>
@@ -8,7 +8,7 @@
 
 int main(int, char**)
 {
-    std::cout << "ArrayFire Config Info" << std::endl << std::endl;
+    std::cout << "ArrayFire Config Info" << std::endl;
 
     const int availableBackends = af::getAvailableBackends();
     const std::vector<af::Backend> backends =
@@ -21,6 +21,7 @@ int main(int, char**)
     {
         if(availableBackends & backend)
         {
+            std::cout << std::endl;
             af::setBackend(backend);
             af::info();
         }
