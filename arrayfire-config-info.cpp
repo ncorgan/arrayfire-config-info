@@ -26,4 +26,5 @@ int main(int, char**)
             af::info();
         }
     }
+    std::cout << std::endl;
 }
